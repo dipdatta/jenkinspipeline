@@ -12,6 +12,7 @@ pipeline {
         stage('Compile') {
           steps {
             echo 'Compilation started'
+            emailext(subject: 'Test mail', body: 'this is a test')
           }
         }
 
